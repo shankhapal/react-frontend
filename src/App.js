@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Edit from "./pages/Edit";
 import Cart from "./components/cart";
+import SignUp from "./components/signup";
 import Certificate from "./pages/Certificate";
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} /> {/* Add this route */}
           <Route path="/edit/:id" element={<Edit />} />
-          {/* <Route path="/dmilogin" element={<DmiLogin />} /> */}
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/certificate" element={<Certificate />} />
         </Routes>
       </div>

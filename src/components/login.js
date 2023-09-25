@@ -1,6 +1,14 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function dmilogin(props) {
+
+export default function Dmilogin(props) {
+  const navigate = useNavigate();
+
+  const goToSignUp = (url) => {
+    navigate(url)
+  }
+
   return (
     <div>
       <div className="card mt-5">
@@ -32,6 +40,16 @@ export default function dmilogin(props) {
                           <input type="email" name="email" className="form-control" id="email" placeholder="name@example.com"/>
                         </div>
                         <button type="submit" className="btn btn-primary">Submit</button>
+
+                        <div class="row mt-5">
+                            <div class="col">
+                                <button onClick={()=> goToSignUp('/signup')} type="button" style={{width:"300px",marginLeft: "68px" }} class="btn btn-outline-secondary">Sign Up</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" style={{width:"300px",marginLeft: "0px"}} class="btn btn-outline-secondary">Forgot Password</button>
+                            </div>
+                       </div>
+
                       </div>
                     </div>
                   </div>
